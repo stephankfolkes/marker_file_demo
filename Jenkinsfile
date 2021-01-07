@@ -33,7 +33,9 @@ spec:
         stage('Main') {
             steps {
 		echo "Printing contents of testfile.txt"
-                cat testfile.txt
+                container('shell') {
+		    sh 'cat testfile.txt'
+		}
             }
         }
     }
