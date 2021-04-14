@@ -35,6 +35,7 @@ spec:
 		echo "Printing contents of testfile.txt"
                 container('shell') {
 		    sh 'cat testfile.txt'
+		    sh 'sleep 60'
 		}
             }
         }
