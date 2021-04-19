@@ -17,14 +17,25 @@ spec:
   containers:
   - name: shell
     image: ubuntu
-    resourceLimitCpu: "50m"
-    resourceLimitMemory: "150Mi"
-    resourceRequestCpu: "50m"
-    resourceRequestMemory: "150Mi"
+    resources:
+      limits:
+        cpu: "50m"
+        memory: "50Mi"
+      requests:
+        cpu: "50m"
+        memory: "50Mi"
     command:
     - sleep
     args:
     - infinity
+  - name: jnlp
+    resources:
+      limits:
+        cpu: "200m"
+        memory: "150Mi"
+      requests:
+        cpu: "200m"
+        memory: "150Mi"
 '''
             // Can also wrap individual steps:
             // container('shell') {
