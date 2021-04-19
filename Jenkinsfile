@@ -17,6 +17,10 @@ spec:
   containers:
   - name: shell
     image: ubuntu
+    resourceLimitCpu: "50m"
+    resourceLimitMemory: "150Mi"
+    resourceRequestCpu: "50m"
+    resourceRequestMemory: "150Mi"
     command:
     - sleep
     args:
