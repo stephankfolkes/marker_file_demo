@@ -32,10 +32,10 @@ spec:
     resources:
       limits:
         cpu: "200m"
-        memory: "150Mi"
+        memory: "256Mi"
       requests:
         cpu: "200m"
-        memory: "150Mi"
+        memory: "256Mi"
 '''
             // Can also wrap individual steps:
             // container('shell') {
